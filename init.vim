@@ -54,15 +54,15 @@ set hlsearch    "hilight searches by default
 set wrap        "dont wrap lines
 set linebreak   "wrap lines at convenient points
 
-"if v:version >= 703
-"    "undo settings
-"    set undodir=~/.vim/undofiles
-"    set undofile
-"
-"    set colorcolumn=+1 "mark the ideal max text width
-"endif
+if v:version >= 703
+    "undo settings
+    set undodir=~/.local/share/nvim/undo/
+    set undofile
 
-"set directory=~/.vim/swapfiles/
+    set colorcolumn=+1 "mark the ideal max text width
+endif
+
+set directory=~/.local/share/nvim/swap/
 
 "default indent settings
 set shiftwidth=2
