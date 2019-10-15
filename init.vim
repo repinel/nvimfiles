@@ -3,9 +3,7 @@ filetype off                  " required
 
 "set the runtime path to include Vundle and initialize
 set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin()
-"alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call vundle#begin('~/.config/nvim/bundle')
 
 "let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
@@ -13,8 +11,6 @@ Plugin 'gmarik/Vundle.vim'
 "plugins list
 Plugin 'godlygeek/csapprox'
 Plugin 'jlanzarotta/bufexplorer'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'tpope/vim-fugitive'
@@ -25,9 +21,13 @@ Plugin 'janko-m/vim-test'
 Plugin 'ap/vim-buftabline'
 Plugin 'vim-flake8'
 Plugin 'posva/vim-vue'
+Plugin 'jremmen/vim-ripgrep'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
+
+"enable fzf plugin
+set rtp+=/usr/local/opt/fzf
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -93,7 +93,7 @@ colorscheme railscasts
 set hidden
 
 "use the system clipboard
-set clipboard=unnamed
+set clipboard=unnamed,unnamedplus
 
 set encoding=utf-8
 
@@ -344,19 +344,14 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 " Extras
 "
 
-"ignore some folders and files for CtrlP indexing
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.idea$\|\.sass-cache$\|\.hg$\|\.svn$\|\.yardoc\|public$\|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$\|\.DS_Store$\|\.tags$' }
-
 "split screen navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"silver searcher
-map <leader>a :Ag!<space>
+"RipGrep searcher
+map <leader>a :Rg<space>
 
 "tab or shift+tab in visual mode
 vmap <Tab> >gv
@@ -383,7 +378,7 @@ map <leader>d :!clear && git diff %<cr>
 nnoremap <leader>e :BufExplorer<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <leader>m :NERDTreeFind<cr>
-let g:ctrlp_map = '<leader>f'
+map <leader>f :FZF<cr>
 
 "toggle class methods
 map <leader>l :TlistToggle<cr>

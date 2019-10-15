@@ -1,0 +1,8 @@
+# ignore everything in `bundle` except `bundle/Vundle.vim`
+bundle/*
+!bundle/Vundle.vim
+
+#.netrwhist
+
+#swapfiles/*
+#!swapfiles/.keep
