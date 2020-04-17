@@ -422,6 +422,7 @@ nnoremap <leader>r :TestNearest<cr>
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
 nnoremap <leader>w :bufdo bd<CR>
+nnoremap <leader>bd :bn<bar>bd#<CR>
 
 "disable arrow keys for normal mode
 map <up> <nop>
