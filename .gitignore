@@ -2,7 +2,9 @@
 bundle/*
 !bundle/Vundle.vim
 
-#.netrwhist
+.netrwhist
 
 #swapfiles/*
 #!swapfiles/.keep
+
+spell/*
