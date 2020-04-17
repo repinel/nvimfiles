@@ -23,6 +23,7 @@ Plugin 'vim-flake8'
 Plugin 'posva/vim-vue'
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'joshdick/onedark.vim'
+Plugin 'sheerun/vim-polyglot'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
