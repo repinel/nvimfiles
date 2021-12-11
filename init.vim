@@ -390,7 +390,7 @@ autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 "autocmd BufWritePost *.py call Flake8()
 
 "git maps
-map <leader>b :Gblame<cr>
+map <leader>b :Git blame<cr>
 map <leader>p :!clear && git log -p %<cr>
 map <leader>d :!clear && git diff %<cr>
 
