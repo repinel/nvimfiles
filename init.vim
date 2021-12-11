@@ -24,6 +24,7 @@ Plugin 'posva/vim-vue'
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'dense-analysis/ale'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
@@ -467,3 +468,14 @@ function! NERDCommenter_after()
     let g:ft = ''
   endif
 endfunction
+
+"
+"ALE (Asynchronous Lint Engine)
+"
+
+"set this variable to 1 to fix files when you save them
+"let g:ale_fix_on_save = 1
+
+let g:ale_fixers = {
+\   'ruby': ['rubocop', 'sorbet'],
+\}
