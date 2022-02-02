@@ -30,7 +30,7 @@ Plugin 'dense-analysis/ale'
 call vundle#end()
 
 "enable fzf plugin
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
