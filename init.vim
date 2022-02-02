@@ -25,12 +25,10 @@ Plugin 'jremmen/vim-ripgrep'
 Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'dense-analysis/ale'
+Plugin 'junegunn/fzf'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
-
-"enable fzf plugin
-set rtp+=/opt/homebrew/opt/fzf
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
