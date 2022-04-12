@@ -439,7 +439,7 @@ command DeleteMe :call delete(expand('%')) | bdelete!
 noremap <C-Y> <Esc>:syntax sync fromstart<CR>
 
 "format JSON files
-command FormatJSON %!python -m json.tool
+command FormatJSON %!python3 -m json.tool
 
 "custom filetype settings
 "autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
