@@ -26,6 +26,7 @@ Plugin 'joshdick/onedark.vim'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'dense-analysis/ale'
 Plugin 'junegunn/fzf'
+Plugin 'rmagatti/auto-session'
 
 "All of your Plugins must be added before the following line
 call vundle#end()
