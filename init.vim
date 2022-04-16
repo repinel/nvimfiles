@@ -1,35 +1,36 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
-"set the runtime path to include Vundle and initialize
-set rtp+=~/.config/nvim/bundle/Vundle.vim
-call vundle#begin('~/.config/nvim/bundle')
+let data_dir = stdpath('data') . '/site'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-"let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+"Plugins will be downloaded under the specified directory.
+call plug#begin(stdpath('data') . '/plugged')
 
-"plugins list
-Plugin 'godlygeek/csapprox'
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/taglist.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'janko-m/vim-test'
-Plugin 'ap/vim-buftabline'
-Plugin 'vim-flake8'
-Plugin 'posva/vim-vue'
-Plugin 'jremmen/vim-ripgrep'
-Plugin 'joshdick/onedark.vim'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'dense-analysis/ale'
-Plugin 'junegunn/fzf'
-Plugin 'rmagatti/auto-session'
+"Declare the list of plugins.
+Plug 'godlygeek/csapprox'
+Plug 'jlanzarotta/bufexplorer'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/taglist.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'scrooloose/nerdcommenter'
+Plug 'janko-m/vim-test'
+Plug 'ap/vim-buftabline'
+Plug 'vim-flake8'
+Plug 'posva/vim-vue'
+Plug 'jremmen/vim-ripgrep'
+Plug 'joshdick/onedark.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'dense-analysis/ale'
+Plug 'junegunn/fzf'
+Plug 'rmagatti/auto-session'
 
-"All of your Plugins must be added before the following line
-call vundle#end()
+"List ends here. Plugins become visible after this call.
+call plug#end()
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -75,12 +76,6 @@ set autoindent
 set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-
-"load ftplugins and indent files
-filetype plugin indent on
-
-"turn on syntax highlighting
-syntax on
 
 "some stuff to get the mouse going in term
 "set mouse=a
