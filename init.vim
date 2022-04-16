@@ -447,6 +447,9 @@ command FormatJSON %!python3 -m json.tool
 autocmd Filetype go setlocal ts=4 sts=4 sw=4 | set expandtab!
 autocmd BufNewFile,BufRead *.git/config,.gitconfig,.gitmodules setlocal noexpandtab ts=4 sts=4 sw=4
 
+"https://github.com/Shopify/mruby
+autocmd BufNewFile,BufRead *.mrb set filetype=ruby
+
 "allow comments in Vue files
 let g:ft = ''
 function! NERDCommenter_before()
