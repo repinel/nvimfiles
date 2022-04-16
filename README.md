@@ -6,8 +6,6 @@ Run:
 ```bash
 cd ~/.config/
 git clone git@github.com:repinel/nvimfiles.git nvim
-cd nvim
-git submodule update --init --recursive
 ```
 
-Now open `nvim`, and run `:PluginInstall` in the editor to install the plugin.
+Now open `nvim`, and run `:PlugInstall` in the editor to install the plugin.
