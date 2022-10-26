@@ -76,9 +76,8 @@ set wildmode=list:longest   "make cmdline tab completion similar to bash
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 
-"some stuff to get the mouse going in term
-"set mouse=a
-"set ttymouse=xterm2
+"disable mouse in term
+set mouse=
 
 "tell the term has 256 colors
 set t_Co=256
