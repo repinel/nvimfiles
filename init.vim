@@ -31,6 +31,10 @@ Plug 'rmagatti/auto-session'
 "List ends here. Plugins become visible after this call.
 call plug#end()
 
+"auto-session setup
+set sessionoptions=blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions
+lua require('auto-session').setup({})
+
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
